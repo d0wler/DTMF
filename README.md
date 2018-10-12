@@ -1,6 +1,6 @@
 # DTMF
 
-This program will generate DTMF tones from input numbers, which are then written to a wave file that can be played back.
+Generate a wave file with DTMF dial tones from input numbers.
 
 ## Getting Started
 
