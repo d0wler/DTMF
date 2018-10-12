@@ -1,6 +1,6 @@
 # DTMF
 
-Generate a wave file with DTMF dial tones from input numbers.
+Generate a wave file that contains DTMF dial tones from input numbers.
 
 ## Getting Started
 
