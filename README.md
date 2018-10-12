@@ -43,7 +43,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Ryan Dowler** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Ryan Dowler** - *Initial work* - [d0wler](https://github.com/d0wler)
 
 
 ## License
