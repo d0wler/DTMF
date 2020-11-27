@@ -13,10 +13,16 @@ t = sample<br><br>
 The max value of signed 16-bit number is 32767 (2^15 – 1).
 Setting amplitude to 16000 to limit scale to half of full-scale audio (32767).<br><br>
 '''
-dtmfDict = {'1': [int(697),int(1209)],'2': [int(697),int(1336)],'3': [int(697),int(1477)],
-            '4': [int(770),int(1209)],'5': [int(770),int(1336)],'6': [int(770),int(1477)],
-            '7': [int(852),int(1209)],'8': [int(852),int(1336)],'9': [int(852),int(1477)],
-                                      '0': [int(941),int(1336)]}
+dtmfDict = {'1': [int(697), int(1209)],
+            '2': [int(697), int(1336)],
+            '3': [int(697), int(1477)],
+            '4': [int(770), int(1209)],
+            '5': [int(770), int(1336)],
+            '6': [int(770), int(1477)],
+            '7': [int(852), int(1209)],
+            '8': [int(852), int(1336)],
+            '9': [int(852), int(1477)],
+            '0': [int(941), int(1336)]}
 
 
 def main():
@@ -68,6 +74,8 @@ def get_phone_number():
         except ValueError:
             print("Oops!  That was no valid number.  Try again...")
     return str(phone_number)
+
+
 '''
 For each sample, multiply it by the amplitude and write it to the wave file
 
@@ -75,9 +83,12 @@ For each sample, multiply it by the amplitude and write it to the wave file
     Struct is a Python library that takes our data and packs it as binary data. 
     The h in the code means 16 bit number.
 '''
+
+
 def create_wav_file(signal):
 
     write(signal.file, signal.sr, signal.samples)
+
 
 def plot_spectrogram(signal):
 
@@ -85,7 +96,7 @@ def plot_spectrogram(signal):
     plt.title('Time Domain')
     plt.xlabel('Time')
     plt.ylabel('Power')
-    plt.plot(range(len(signal.samples)),signal.samples)
+    plt.plot(range(len(signal.samples)), signal.samples)
     plt.subplot(212)
     plt.title('Spectrogram')
     plt.xlabel('Frequency')
@@ -94,10 +105,6 @@ def plot_spectrogram(signal):
     plt.tight_layout()
     plt.show()
 
+
 if __name__ == "__main__":
     main()
-
-
-
-
-
