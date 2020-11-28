@@ -3,6 +3,7 @@ install:
 		pip install -r requirements.txt
 
 lint:
-	pylint dtmf/__init__.py
+	pylint src/dtmf.py
 
-
+test:
+	pytest
